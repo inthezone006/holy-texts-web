@@ -1,157 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Holy Texts - Home</title>
-    <meta
-      name="description"
-      content="Holy Texts is a modern Android app to read sacred scriptures with clean design, search, bookmarks, and reading history."
-    />
-    <link rel="icon" type="image/svg+xml" href="assets/holy_texts.svg" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="index.html">
-          <span class="brand-mark"><img src="assets/holy_texts.svg" alt="Holy Texts app icon" /></span>
-          <span>Holy Texts</span>
-        </a>
-        <button class="menu-btn" data-menu-button aria-expanded="false" aria-label="Open menu">Menu</button>
-        <nav class="nav-links" data-nav-links>
-          <a class="active" href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="features.html">Features</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy.html">Privacy</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Simulator - Home</title>
+    <link rel="icon" type="image/png" href="assets/app_icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #121212; color: #ffffff; }
+        .glass { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .menu-panel { background: rgba(18, 18, 18, 0.96); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(10px); }
+        .btn-primary { background-color: #ffffff; color: #000000; transition: all 0.3s ease; }
+        .btn-primary:hover { background-color: #e5e5e5; transform: translateY(-2px); }
+    </style>
+</head>
+<body class="selection:bg-white selection:text-black">
+
+    <div class="relative">
+        <nav class="max-w-6xl mx-auto px-6 py-6 md:py-8 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="assets/app_icon.png" alt="Logo" class="w-10 h-10">
+                <span class="text-xl font-extrabold tracking-tight">Stock Market Simulator</span>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-300 hover:text-white" aria-label="Open menu">
+                ☰
+            </button>
+            <div id="menuDesktop" class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="features" class="hover:text-white transition">Features</a>
+                <a href="privacy" class="hover:text-white transition">Privacy</a>
+                <a href="support" class="hover:text-white transition">Support</a>
+            </div>
         </nav>
-      </div>
+
+        <div id="menuMobile" class="md:hidden hidden absolute left-0 right-0 top-full z-50 px-6 pb-4">
+            <div class="menu-panel rounded-2xl p-4 space-y-3 text-sm font-medium text-gray-300">
+                <a href="features" class="block hover:text-white transition">Features</a>
+                <a href="privacy" class="block hover:text-white transition">Privacy</a>
+                <a href="support" class="block hover:text-white transition">Support</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="max-w-4xl mx-auto px-6 pt-20 pb-32 text-center">
+        <img src="assets/app_icon.png" alt="App Icon" class="w-32 h-32 mx-auto mb-8">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tighter">
+            Master the Market. <br/><span class="text-gray-500">Risk Free.</span>
+        </h1>
+        <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+            A minimalist, modern stock simulator built for the next generation of investors. 
+            Track live data, climb the leaderboard, and refine your strategy.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+            <a href="#" aria-disabled="true" class="btn-primary px-8 py-4 rounded-xl font-bold text-lg shadow-lg opacity-50 cursor-not-allowed pointer-events-none">
+                Coming soon on Google Play
+            </a>
+            <!--
+            <a href="https://play.google.com/apps/testing/com.rahul.stocksim" class="btn-primary px-8 py-4 rounded-xl font-bold text-lg shadow-lg">
+                Get it on Google Play
+            </a>
+            -->
+            <a href="https://github.com/inthezone006/stock-market-simulator" class="glass px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">
+                View on GitHub
+            </a>
+        </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-content bento-item bento-wide">
-            <span class="tag">Android App</span>
-            <h1>Read, search, and reflect on holy scriptures in one calm space.</h1>
-            <p>
-              Holy Texts brings multiple sacred books together in a focused reading experience inspired by modern design.
-              Continue where you left off, discover daily verses, and keep your spiritual study organized.
-            </p>
-            <div class="button-row">
-              <a class="btn primary" href="contact.html">Get Early Access</a>
-              <a class="btn ghost" href="features.html">Explore Features</a>
+    <section id="features" class="max-w-6xl mx-auto px-6 py-24 border-t border-white/10">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass p-8 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/5 cursor-default">
+                <div class="text-3xl mb-4">📊</div>
+                <h3 class="text-xl font-bold mb-2">Real-time Trading</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Execute trades with live market data. Experience the volatility without the risk.</p>
             </div>
-          </div>
-
-          <aside class="mock-panel hero-panel bento-item" aria-label="App preview cards">
-            <div class="mock-grid">
-              <div class="mock-card primary" data-popup-title="Continue Reading" data-popup-description="Resume instantly from your latest chapter with context preserved for uninterrupted study.">
-                <h3>Continue Reading</h3>
-                <p class="muted">Genesis • Chapter 5</p>
-              </div>
-              <div class="mock-card soft" data-popup-title="Library" data-popup-description="Browse all supported holy books from one organized shelf and jump directly into chapters.">
-                <h3>Library</h3>
-                <p class="muted">Bible, Quran, Gita, Torah</p>
-              </div>
-              <div class="mock-card accent" data-popup-title="Search" data-popup-description="Find verses quickly using keywords or references so you can navigate sacred texts with ease.">
-                <h3>Search</h3>
-                <p class="muted">Find verses fast</p>
-              </div>
-              <div class="mock-card soft" data-popup-title="Account" data-popup-description="Manage profile preferences, theme mode, and personal reading settings in one place.">
-                <h3>Account</h3>
-                <p class="muted">Dark mode + settings</p>
-              </div>
+            <div class="glass p-8 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/5 cursor-default">
+                <div class="text-3xl mb-4">🏆</div>
+                <h3 class="text-xl font-bold mb-2">Global Leaderboard</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Join Level 1 with $100,000 and climb the ranks. See how your portfolio stacks up against the world.</p>
             </div>
-          </aside>
+            <div class="glass p-8 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/5 cursor-default">
+                <div class="text-3xl mb-4">⚙️</div>
+                <h3 class="text-xl font-bold mb-2">Account Management</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Customize your profile, preferences, and security settings with ease.</p>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="section">
-        <div class="container">
-          <h2>Built for intentional reading</h2>
-          <p class="section-intro">
-            Every screen is optimized for readability and ease of navigation, based on your Android app design.
-          </p>
-          <div class="card-grid bento-grid">
-            <article class="card bento-item bento-wide" data-popup-title="Unified Library" data-popup-description="Holy Texts combines multiple sacred traditions into one consistent reading interface for easier exploration.">
-              <h3>Unified Library</h3>
-              <p>Browse major holy books from one clean interface with consistent chapter navigation.</p>
-            </article>
-            <article class="card bento-item" data-popup-title="Quick Verse Search" data-popup-description="Reference lookups like John 3:18 are optimized for speed so users reach the exact verse with minimal friction.">
-              <h3>Quick Verse Search</h3>
-              <p>Look up references such as "John 3:18" and jump instantly to matching verses.</p>
-            </article>
-            <article class="card bento-item" data-popup-title="Reading Continuity" data-popup-description="Recent history and resume state help users continue spiritual reading habits day after day.">
-              <h3>Reading Continuity</h3>
-              <p>Resume where you paused with recent history and easy chapter progression.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <h2>See the app in action</h2>
-          <p class="section-intro">Actual screens from Holy Texts on Android, including Home, Library, Reader, and Account workflows.</p>
-          <div class="screenshot-grid bento-grid">
-            <figure class="phone-shot bento-item" data-popup-title="Home Dashboard Screenshot" data-popup-description="This screen highlights quick-access cards including Continue Reading, Search, and Daily Verse."><img src="assets/Screenshot_20260220_111615.png" alt="Holy Texts home screen" /></figure>
-            <figure class="phone-shot bento-item" data-popup-title="Library Screenshot" data-popup-description="Users can browse available books such as Bible, Quran, Bhagavad Gita, Torah, and more in a clean grid."><img src="assets/Screenshot_20260220_111624.png" alt="Holy Texts library screen" /></figure>
-            <figure class="phone-shot bento-item" data-popup-title="Reader Screenshot" data-popup-description="The reading view is tuned for legibility with verse numbers, spacing, and quick access actions."><img src="assets/Screenshot_20260220_111640.png" alt="Holy Texts reader screen" /></figure>
-            <figure class="phone-shot bento-item" data-popup-title="Account Screenshot" data-popup-description="Account management includes profile information, dark mode controls, and essential settings."><img src="assets/Screenshot_20260220_111754.png" alt="Holy Texts account screen" /></figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container two-col bento-grid">
-          <div class="info-panel bento-item" data-popup-title="Why Users Love Holy Texts" data-popup-description="The app is built around calm visuals, fast navigation, and long-form readability to support daily spiritual practice.">
-            <h3>Why users love Holy Texts</h3>
-            <ul class="list">
-              <li>Minimal, distraction-free dark interface.</li>
-              <li>Card-based navigation across Home, Library, and Account.</li>
-              <li>Bookmarks and history for personal study flow.</li>
-              <li>Professional typography designed for long reading sessions.</li>
-            </ul>
-          </div>
-          <div class="info-panel bento-item" data-popup-title="Launch Roadmap" data-popup-description="Upcoming milestones include public Android release, sync features, and cross-device expansion.">
-            <h3>Launch roadmap</h3>
-            <ul class="list">
-              <li>Public Android release with expanded scripture sets.</li>
-              <li>Cloud sync for bookmarks and preferences.</li>
-              <li>Cross-device support and personalized reading plans.</li>
-              <li>Community-driven translation packs.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <div class="container">
-        <section class="cta-band">
-          <div>
-            <h3>Want updates as Holy Texts launches?</h3>
-            <p class="muted">Join the mailing list and receive product milestones.</p>
-          </div>
-          <a class="btn ghost" href="contact.html">Contact Team</a>
-        </section>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <span>© 2026 Holy Texts</span>
-        <nav class="footer-links">
-          <a href="about.html">About</a>
-          <a href="features.html">Features</a>
-          <a href="faq.html">FAQ</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
+    
+    <footer class="text-center py-12 text-xs text-gray-600 border-t border-white/5">
+        &copy; 2026 Rahul Menon | Built with Material 3 | Updated February 8, 2026
     </footer>
 
-    <script src="script.js"></script>
-  </body>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const menuMobile = document.getElementById('menuMobile');
+        if (menuBtn && menuMobile) {
+            menuBtn.addEventListener('click', () => {
+                menuMobile.classList.toggle('hidden');
+            });
+            menuMobile.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    menuMobile.classList.add('hidden');
+                });
+            });
+            document.addEventListener('click', (event) => {
+                if (menuMobile.classList.contains('hidden')) {
+                    return;
+                }
+                const clickedMenu = menuMobile.contains(event.target);
+                const clickedButton = menuBtn.contains(event.target);
+                if (!clickedMenu && !clickedButton) {
+                    menuMobile.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+</body>
 </html>

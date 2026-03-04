@@ -1,116 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Features | Holy Texts</title>
-    <meta name="description" content="Explore key features of Holy Texts: unified library, search, bookmarks, dark mode, and account settings." />
-    <link rel="icon" type="image/svg+xml" href="assets/holy_texts.svg" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="index.html"><span class="brand-mark"><img src="assets/holy_texts.svg" alt="Holy Texts app icon" /></span><span>Holy Texts</span></a>
-        <button class="menu-btn" data-menu-button aria-expanded="false" aria-label="Open menu">Menu</button>
-        <nav class="nav-links" data-nav-links>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a class="active" href="features.html">Features</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy.html">Privacy</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Simulator - Features</title>
+    <link rel="icon" type="image/png" href="assets/app_icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #121212; color: #ffffff; }
+        .glass { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .menu-panel { background: rgba(18, 18, 18, 0.96); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body>
+    <div class="relative">
+        <nav class="max-w-6xl mx-auto px-6 py-6 md:py-8 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="assets/app_icon.png" alt="Logo" class="w-10 h-10">
+                <a href="index" class="text-xl font-extrabold tracking-tight">Stock Market Simulator</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-300 hover:text-white" aria-label="Open menu">
+                ☰
+            </button>
+            <div id="menuDesktop" class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="features" class="text-white transition">Features</a>
+                <a href="privacy" class="hover:text-white transition">Privacy</a>
+                <a href="support" class="hover:text-white transition">Support</a>
+            </div>
         </nav>
-      </div>
-    </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-content">
-          <span class="tag">Feature set</span>
-          <h1>Everything needed for focused, daily scripture reading.</h1>
-          <p>
-            Holy Texts combines practical tools and thoughtful design to support continuous study across multiple holy books.
-          </p>
+        <div id="menuMobile" class="md:hidden hidden absolute left-0 right-0 top-full z-50 px-6 pb-4">
+            <div class="menu-panel rounded-2xl p-4 space-y-3 text-sm font-medium text-gray-300">
+                <a href="features" class="block text-white transition">Features</a>
+                <a href="privacy" class="block hover:text-white transition">Privacy</a>
+                <a href="support" class="block hover:text-white transition">Support</a>
+            </div>
         </div>
-      </section>
+    </div>
 
-      <section class="section">
-        <div class="container card-grid bento-grid">
-          <article class="card bento-item bento-wide" data-popup-title="Home Dashboard" data-popup-description="Core journeys are surfaced immediately so users can continue reading, discover verses, or search from one screen.">
-            <h3>Home Dashboard</h3>
-            <p>Start quickly with Continue Reading, Daily Verse, Search, Bookmarks, and Recent History cards.</p>
-          </article>
-          <article class="card bento-item" data-popup-title="Multi-Text Library" data-popup-description="A unified catalog enables fast movement across multiple holy books without changing app contexts.">
-            <h3>Multi-Text Library</h3>
-            <p>Browse Bible, Quran, Bhagavad Gita, Torah, Guru Granth Sahib, and Dhammapada in one place.</p>
-          </article>
-          <article class="card bento-item" data-popup-title="Reader Screen" data-popup-description="Typography, spacing, and controls are optimized to make verse-by-verse reading clear and comfortable.">
-            <h3>Reader Screen</h3>
-            <p>Clean verse layout with chapter controls, quick actions, and floating search access.</p>
-          </article>
-          <article class="card bento-item bento-wide" data-popup-title="Verse Search Overlay" data-popup-description="Reference-friendly search returns relevant verses quickly and supports in-flow reading discovery.">
-            <h3>Verse Search Overlay</h3>
-            <p>Search with natural references like "John 3:18" and view top verse matches instantly.</p>
-          </article>
-          <article class="card bento-item" data-popup-title="Account Controls" data-popup-description="Authentication and profile settings are grouped in an intuitive panel for easier account management.">
-            <h3>Account Controls</h3>
-            <p>Profile settings, secure sign-in/sign-up workflows, and clear account management actions.</p>
-          </article>
-          <article class="card bento-item" data-popup-title="Dark Mode" data-popup-description="A balanced dark palette reduces eye strain while preserving contrast across long reading sessions.">
-            <h3>Dark Mode</h3>
-            <p>Comfortable nighttime reading with contrast-balanced color tokens and card surfaces.</p>
-          </article>
+    <section class="max-w-6xl mx-auto px-6 py-20 overflow-hidden">
+    <h1 class="text-5xl font-extrabold mb-4 tracking-tight" data-aos="fade-right">Feature Gallery</h1>
+    <p class="text-gray-500 mb-12" data-aos="fade-right" data-aos-delay="100">Explore the powerful interface built with Jetpack Compose and Material 3.</p>
+
+    <div class="flex overflow-x-auto pb-10 space-x-6 snap-x snap-mandatory scrollbar-hide" data-aos="fade-up">
+        
+        <div class="flex-none w-80 snap-center">
+            <div class="glass p-4 rounded-3xl transition-transform hover:scale-105 duration-300">
+                <img src="assets/Screenshot_20260208_230106.png" class="rounded-2xl mb-4" alt="Market Dashboard">
+                <h3 class="text-lg font-bold px-2">Stocks Dashboard</h3>
+                <p class="text-gray-400 text-sm px-2 mt-2">View real-time stock lists for AAPL, MSFT, and other watchlist items with live percentage changes.</p>
+            </div>
         </div>
-      </section>
 
-      <section class="section">
-        <div class="container">
-          <h2>Feature walkthrough screenshots</h2>
-          <p class="section-intro">Real app captures highlighting the home dashboard, library browsing, in-reader experience, search panel, account, and profile settings.</p>
-          <div class="screenshot-grid bento-grid">
-            <figure class="phone-shot bento-item" data-popup-title="Dashboard View" data-popup-description="The home dashboard uses quick cards to reduce taps and keep frequent actions visible."><img src="assets/Screenshot_20260220_111615.png" alt="Home dashboard screenshot" /></figure>
-            <figure class="phone-shot bento-item" data-popup-title="Library View" data-popup-description="Book navigation is presented in a clear visual grid with consistent labels and quick entry points."><img src="assets/Screenshot_20260220_111624.png" alt="Library screenshot" /></figure>
-            <figure class="phone-shot bento-item" data-popup-title="Reader View" data-popup-description="Verse reading stays distraction-light with clear numbering and high readability."><img src="assets/Screenshot_20260220_111640.png" alt="Reader screenshot" /></figure>
-            <figure class="phone-shot bento-item" data-popup-title="Search View" data-popup-description="The search panel accepts natural verse references and returns concise verse previews."><img src="assets/Screenshot_20260220_111733.png" alt="Search overlay screenshot" /></figure>
-            <figure class="phone-shot bento-item" data-popup-title="Account View" data-popup-description="Users can manage profile and app-level toggles from a focused account dashboard."><img src="assets/Screenshot_20260220_111754.png" alt="Account screenshot" /></figure>
-            <figure class="phone-shot bento-item" data-popup-title="Profile Settings View" data-popup-description="Security and account lifecycle actions are grouped for easy profile management."><img src="assets/Screenshot_20260220_111802.png" alt="Profile settings screenshot" /></figure>
-            <figure class="phone-shot bento-item" data-popup-title="Additional App Screen" data-popup-description="This capture showcases another state of the Holy Texts interface in live Android usage."><img src="assets/Screenshot_20260303_181519.png" alt="Additional Holy Texts app screenshot" /></figure>
-            <figure class="phone-shot bento-item" data-popup-title="Alternate Account State" data-popup-description="This variant demonstrates account interactions for users before and after sign-in."><img src="assets/Screenshot_20260220_111744.png" alt="Alternative account state screenshot" /></figure>
-          </div>
+        <div class="flex-none w-80 snap-center">
+            <div class="glass p-4 rounded-3xl transition-transform hover:scale-105 duration-300">
+                <img src="assets/Screenshot_20260216_010641.png" class="rounded-2xl mb-4" alt="Trade Execution">
+                <h3 class="text-lg font-bold px-2">Precision Trading</h3>
+                <p class="text-gray-400 text-sm px-2 mt-2">Execute Buy/Sell orders with detailed market stats including a 24 hour graph, Day High, Low, and Prev Close.</p>
+            </div>
         </div>
-      </section>
 
-      <section class="section">
-        <div class="container two-col bento-grid">
-          <article class="info-panel bento-item" data-popup-title="Designed for Clarity" data-popup-description="Information architecture and navigation patterns are intentionally simple to reduce cognitive load.">
-            <h3>Designed for clarity</h3>
-            <p>
-              The UI follows a consistent card system and bottom navigation model so users always know where they are.
-            </p>
-          </article>
-          <article class="info-panel bento-item" data-popup-title="Built for Growth" data-popup-description="The product is structured to scale with new books, translations, and personalized reading features.">
-            <h3>Built for growth</h3>
-            <p>
-              The product architecture supports adding texts, translations, and personalization features over time.
-            </p>
-          </article>
+        <div class="flex-none w-80 snap-center">
+            <div class="glass p-4 rounded-3xl transition-transform hover:scale-105 duration-300">
+                <img src="assets/Screenshot_20260208_230126.png" class="rounded-2xl mb-4" alt="Portfolio Tracking">
+                <h3 class="text-lg font-bold px-2">Simulator Guide</h3>
+                <p class="text-gray-400 text-sm px-2 mt-2">Even if you don't know much about stocks, our simulator provides a comprehensive guide to help.</p>
+            </div>
         </div>
-      </section>
-    </main>
 
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <span>© 2026 Holy Texts</span>
-        <nav class="footer-links">
-          <a href="about.html">About</a>
-          <a href="faq.html">FAQ</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
+        <div class="flex-none w-80 snap-center">
+            <div class="glass p-4 rounded-3xl transition-transform hover:scale-105 duration-300">
+                <img src="assets/Screenshot_20260208_230120.png" class="rounded-2xl mb-4" alt="Global Leaderboard">
+                <h3 class="text-lg font-bold px-2">Global Leaderboard</h3>
+                <p class="text-gray-400 text-sm px-2 mt-2">Compete with users like me and climb the ranks across different difficulty levels.</p>
+            </div>
+        </div>
+
+        <div class="flex-none w-80 snap-center">
+            <div class="glass p-4 rounded-3xl transition-transform hover:scale-105 duration-300">
+                <img src="assets/Screenshot_20260208_230113.png" class="rounded-2xl mb-4" alt="Search Interface">
+                <h3 class="text-lg font-bold px-2">Smart Positions</h3>
+                <p class="text-gray-400 text-sm px-2 mt-2">Quickly find and analyze stocks you hold, both previously and currently, for quick analysis.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+    <footer class="text-center py-12 text-xs text-gray-600 border-t border-white/5">
+        &copy; 2026 Rahul Menon | Built with Material 3 | Updated February 8, 2026
     </footer>
 
-    <script src="script.js"></script>
-  </body>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const menuMobile = document.getElementById('menuMobile');
+        if (menuBtn && menuMobile) {
+            menuBtn.addEventListener('click', () => {
+                menuMobile.classList.toggle('hidden');
+            });
+            menuMobile.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    menuMobile.classList.add('hidden');
+                });
+            });
+            document.addEventListener('click', (event) => {
+                if (menuMobile.classList.contains('hidden')) {
+                    return;
+                }
+                const clickedMenu = menuMobile.contains(event.target);
+                const clickedButton = menuBtn.contains(event.target);
+                if (!clickedMenu && !clickedButton) {
+                    menuMobile.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
 </html>

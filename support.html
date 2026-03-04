@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Market Simulator - Privacy Policy</title>
+    <title>Stock Market Simulator - Support</title>
     <link rel="icon" type="image/png" href="assets/app_icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #121212; color: #ffffff; }
         .menu-panel { background: rgba(18, 18, 18, 0.96); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(10px); }
+        input, select, textarea { background-color: #1a1a1a !important; border-color: #333 !important; color: white !important; }
+        input:focus { border-color: #ffffff !important; outline: none; }
     </style>
 </head>
 <body>
@@ -24,41 +26,48 @@
             </button>
             <div id="menuDesktop" class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
                 <a href="features" class="hover:text-white transition">Features</a>
-                <a href="privacy" class="text-white transition">Privacy</a>
-                <a href="support" class="hover:text-white transition">Support</a>
+                <a href="privacy" class="hover:text-white transition">Privacy</a>
+                <a href="support" class="text-white transition">Support</a>
             </div>
         </nav>
 
         <div id="menuMobile" class="md:hidden hidden absolute left-0 right-0 top-full z-50 px-6 pb-4">
             <div class="menu-panel rounded-2xl p-4 space-y-3 text-sm font-medium text-gray-300">
                 <a href="features" class="block hover:text-white transition">Features</a>
-                <a href="privacy" class="block text-white transition">Privacy</a>
-                <a href="support" class="block hover:text-white transition">Support</a>
+                <a href="privacy" class="block hover:text-white transition">Privacy</a>
+                <a href="support" class="block text-white transition">Support</a>
             </div>
         </div>
     </div>
 
-    <article class="max-w-3xl mx-auto px-6 py-20 leading-relaxed">
-        <h1 class="text-4xl font-extrabold mb-8">Privacy Policy</h1>
-        <p class="text-gray-400 mb-8">Effective Date: January 30, 2026</p>
-        
-        <div class="space-y-8">
-            <section>
-                <h3 class="text-xl font-bold text-white mb-3">1. Information We Collect</h3>
-                <p class="text-gray-400">Stock Market Simulator collects your <strong>Name</strong> and <strong>Email Address</strong> solely for the purpose of secure authentication and profile management via Google Firebase and Google Sign-In.</p>
-            </section>
+    <div class="max-w-xl mx-auto px-6 py-20">
+        <h2 class="text-3xl font-bold mb-4">Support & Deletion</h2>
+        <p class="text-gray-400 mb-10">Need technical assistance or wish to delete your data? Submit the form below, and we'll get back to you within 48 hours.</p>
 
-            <section>
-                <h3 class="text-xl font-bold text-white mb-3">2. Data Security</h3>
-                <p class="text-gray-400">All user data is encrypted in transit using industry-standard HTTPS/TLS protocols via Google Firebase services. We do not sell or share your personal information with third parties.</p>
-            </section>
-
-            <section>
-                <h3 class="text-xl font-bold text-white mb-3">3. Account Deletion</h3>
-                <p class="text-gray-400">Users have the right to request the deletion of their account and all associated data at any time. To do so, please follow the instructions on our <a href="support" class="text-white underline">Support Page</a>.</p>
-            </section>
-        </div>
-    </article>
+        <form action="https://formspree.io/f/xkobejez" method="POST" class="space-y-6">
+            <div>
+                <label class="block text-sm font-semibold mb-2 text-gray-300">Your Email</label>
+                <input type="email" name="email" required class="w-full p-4 rounded-xl border transition">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold mb-2 text-gray-300">Request Type</label>
+                <select name="type" class="w-full p-4 rounded-xl border transition">
+                    <option value="support">Technical Support</option>
+                    <option value="deletion">Account & Data Deletion</option>
+                    <option value="bug">Bug Report</option>
+                    <option value="review">Review</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold mb-2 text-gray-300">Message</label>
+                <textarea name="message" rows="4" required class="w-full p-4 rounded-xl border transition"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-gray-200 transition-transform active:scale-95">
+                Send Request
+            </button>
+        </form>
+        <p class="text-sm text-gray-400 mt-2">Form processing provided by <a href="https://formspree.io" class="underline hover:text-white">Formspree</a>.</p>
+    </div>
     
     <footer class="text-center py-12 text-xs text-gray-600 border-t border-white/5">
         &copy; 2026 Rahul Menon | Built with Material 3 | Updated February 8, 2026
