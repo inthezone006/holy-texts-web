@@ -1,34 +1,50 @@
-# Holy Texts Web
+# Holy Texts
 
-Modern, professional marketing website for the Holy Texts Android app.
+A modern, open-source Android application built with Jetpack Compose for reading, studying, and reflecting on sacred scriptures from various world religions.
 
-## Pages
+## 🌟 Features
 
-- `index.html` – Home
-- `about.html` – About
-- `features.html` – Features
-- `faq.html` – FAQ
-- `contact.html` – Contact
-- `privacy.html` – Privacy Policy
+### 📖 Extensive Library
+- The Holy Bible: Multiple versions including King James Version (KJV), American Standard Version (ASV), and Authorized King James Version (AKJV)
+- The Holy Quran: Uthmani script with English translations (Yusuf Ali) togglable directly in the reader
+- Coming Soon: Integration for Bhagavad Gita, Torah, Guru Granth Sahib, and Dhammapada
 
-## Tech
+### 🏠 Dynamic Home Screen
+- Bento Grid UI: A clean, modern dashboard inspired by modern design trends
+- Continue Reading: Instantly jump back to your last read chapter or suryah
+- Quick Access: Direct links to Search, Bookmarks, and the Daily Verse
 
-- Plain HTML, CSS, and JavaScript
-- Responsive layout and mobile navigation
-- Dark card-based visual style matching the Android app design
+### ⚙️ Spiritual & Study Tools
+- Daily Verse: Automated randomized verse or ayah delivered via notification at 12:00 PM daily (source and focus customizable)
+- Qibla Compass: Real-time orientation sensor and GPS-based direction to the Kaaba
+- Unified Search: Search through all scriptures and translations simultaneously with high-performance filtering
+- Cloud Study: Highlight meaningful passages and save bookmarks to the cloud
 
-## Run locally
+### 🛠 Personalized Reader
+- Themes: Support for Light, Dark, and an eye-friendly Sepia mode
+- Typography: Custom font sizes, line spacing, and font families (Serif, SansSerif, Monospace)
+- Dual Text: Quran translations displayed as italicized subtitles under the original Arabic text
 
-You can open `index.html` directly in a browser, or run a local static server:
+## 🚀 Tech Stack
+- Language: Kotlin
+- UI Framework: Jetpack Compose
+- Architecture: MVVM (Model-View-ViewModel)
+- Local Persistence: DataStore Preferences
+- Background Processing: WorkManager
+- Cloud Backend: Firebase (Auth, Firestore, Analytics, Crashlytics)
+- Data Parsing: XMLPullParser & Optimized Buffered Readers
 
-```powershell
-python -m http.server 5500
-```
+## 🛠 Setup & Installation
+1. Clone the repository.
+2. Add your `google-services.json` to the `/app` directory.
+3. Ensure the asset files (`bible_kjv.txt`, `quran-uthmani.xml`, `en.yusufali.xml`, etc.) are in `/app/src/main/assets`.
+4. Build and run using Android Studio Ladybug or newer.
 
-Then open:
+## 📈 Analytics & Stability
 
-- `http://localhost:5500`
+Integrated with Firebase Analytics for usage insights and Firebase Crashlytics for real-time stability monitoring and bug fixing.
 
-## Deploy
+## 📄 License
 
-This repository is ready for GitHub Pages static hosting.
+Copyright © 2025 Rahul.
+Licensed under the MIT License.
